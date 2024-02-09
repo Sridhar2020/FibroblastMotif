@@ -75,10 +75,10 @@ int main(int argc, char **argv)
  int NUMFIB = 4;
  double FIB_CAP = 50; //50
  double MYO_CAP = 185; //185
- double G_str1GAP = 0;
+ double G_str1GAP = G_STRONG1;
  double G_str2GAP = G_STRONG1;
  double G_wk1GAP = G_WEAK1;
- double G_wk2GAP = 0; //G_WEAK1;
+ double G_wk2GAP = 0;//G_WEAK1;
  int start1 = START; // Starting time of stimulation at cell 1
  int delay1 = DELAY*1000; // Delay in starting time of stimulation at cell 2
  //printf("done\n");

@@ -23,7 +23,7 @@
 //#define BCL2            350.0  
 #define G_STRONG1       0.0
 //#define G_STRONG2        0.0 
-#define G_WEAK1         1.0
+#define G_WEAK1         3.0
 //#define G_WEAK2         0.0
 #define START            0
 #define DELAY            0

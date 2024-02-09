@@ -10,7 +10,7 @@ for rate in np.array([300,400,500,600]):
             for delay in np.array([0,10,25]): 
                          for strong in np.array([0, 0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0]):
                                        for weak in np.array([0, 0.5, 1.0, 1.5, 2.0, 2.5, 3.0, 3.5, 4.0]):
-                                                   folder = "Motif1_ShallowSlope_HomogenFibMyo_EqualT1T2_{0}ms_Delay{1}ms_LocCoup_{2}nS_LongCoup_{3}nS".format(rate,delay,strong,weak)  
+                                                   folder = "Motif2_ShallowSlope_HomogenFibMyo_EqualT1T2_{0}ms_Delay{1}ms_LocCoup_{2}nS_LongCoup_{3}nS".format(rate,delay,strong,weak)  
                                                    commandline.append("./set.sh BCL1 {0}".format(rate))
                                                    commandline.append("./set.sh DELAY {0}".format(delay))
                                                    commandline.append("./set.sh G_STRONG1 {0}".format(strong))
