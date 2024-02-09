@@ -9,6 +9,8 @@ To run the programs first run MakeFolder.py followed by Run_script.py
 
 The programs here are for the case where the Fibroblasts have a resting membrane potential of -24.5 mV. 
 
+Note that some of the files are common across the different folders.
+
 
 
   
