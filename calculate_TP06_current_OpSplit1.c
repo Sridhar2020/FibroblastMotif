@@ -226,7 +226,7 @@ double calculate_TP06_current_OpSplit1( double *U1, double dt, double **lookup, 
   	double d_inf, tau_d;
     double f_inf, tau_f;
 	// adjust for different parameters
-         const double tau_f_multiplier = 0.6; // par 1
+        const double tau_f_multiplier = 0.6; // par 1
 	//const double tau_f_multiplier = 1.0; // par 2
 	//const double tau_f_multiplier = 1.5; // par 3
 	//const double tau_f_multiplier = 2.0; // par 4
