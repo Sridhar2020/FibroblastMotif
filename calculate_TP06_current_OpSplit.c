@@ -226,10 +226,10 @@ double calculate_TP06_current_OpSplit( double *U, double dt, double **lookup, in
   	double d_inf, tau_d;
     double f_inf, tau_f;
 	// adjust for different parameters
-        // const double tau_f_multiplier = 0.6; // par 1
+          const double tau_f_multiplier = 0.6; // par 1
 	//const double tau_f_multiplier = 1.0; // par 2
 	//const double tau_f_multiplier = 1.5; // par 3
-	const double tau_f_multiplier = 2.0; // par 4
+	//const double tau_f_multiplier = 2.0; // par 4
 	//const double tau_f_multiplierR2 = 1.0; // par R2
     //const double tau_f_multiplierR1 = 0.5; // par R1
     double f2_inf, tau_f2;
@@ -421,7 +421,7 @@ double calculate_TP06_current_OpSplit( double *U, double dt, double **lookup, in
     tau_xr2 = axr2 * bxr2;
      
  
- 	Gkr = GkrPar4; //GkrPar4;
+ 	Gkr = GkrPar1; //GkrPar4;
  	U[Xr1] = xr1_inf - (xr1_inf - U[Xr1]) * exp( -dt / tau_xr1 );
  	U[Xr2] = xr2_inf - (xr2_inf - U[Xr2]) * exp( -dt / tau_xr2 );
 	IKr = Gkr*sqrt(Ko/5.4)*U[Xr1]*U[Xr2]*(U[V]-Ek);
@@ -445,7 +445,7 @@ double calculate_TP06_current_OpSplit( double *U, double dt, double **lookup, in
 	//if (celltype == 0) { Gks = GksEndo; }
 	//else if (celltype == 1) { Gks = GksMcell; }
 	//else  {Gks = GksEpi; }
-	Gks = GksPar4; //GksPar4;
+	Gks = GksPar1; //GksPar4;
 	IKs = Gks*U[Xs]*U[Xs]*(U[V]-Eks);
 
   /* Time independent K current */
@@ -455,7 +455,7 @@ double calculate_TP06_current_OpSplit( double *U, double dt, double **lookup, in
 	IK1 = GK1*rec_iK1*(U[V] - Ek);
 
   /* Plateau K current */
-  	GpK=GpKPar4; //GpKPar4;
+  	GpK=GpKPar1; //GpKPar4;
 	rec_ipK = 1.0/(1.0+exp((25.0-U[V])/5.98));
 	IpK=GpK*rec_ipK*(U[V]-Ek);
 
@@ -507,7 +507,7 @@ double calculate_TP06_current_OpSplit( double *U, double dt, double **lookup, in
 	INaK=knak*(Ko/(Ko+KmK))*(U[Nai]/(U[Nai]+KmNa))*rec_iNaK;
 
   /* Plateau Ca current */
- 	GpCa=GpCaPar4; //GpCaPar4;
+ 	GpCa=GpCaPar1; //GpCaPar4;
   	IpCa=GpCa*U[Cai]/(KpCa+U[Cai]);
 
   /* Background Ca current */
