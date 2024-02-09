@@ -78,7 +78,7 @@ int main(int argc, char **argv)
  double G_str1GAP = G_STRONG1;
  double G_str2GAP = G_STRONG1;
  double G_wk1GAP = G_WEAK1;
- double G_wk2GAP = 0;//G_WEAK1;
+ double G_wk2GAP = G_WEAK1;
  int start1 = START; // Starting time of stimulation at cell 1
  int delay1 = DELAY*1000; // Delay in starting time of stimulation at cell 2
  //printf("done\n");
@@ -170,7 +170,7 @@ int main(int argc, char **argv)
 
             
             if (t%(int)(bcl1/dtlong) > start1 && t%(int)(bcl1/dtlong) <=(start1+1000)) //duration = 10 iterations
-                 stimCurrent1 = -52.0;
+                 stimCurrent1 = -52.0;//-52.0;
             else stimCurrent1 = 0.0;  
                        
            if (t%(int)(bcl2/dtlong) > (start1+delay1) && t%(int)(bcl2/dtlong) <=(start1+delay1+1000))
